@@ -10,11 +10,14 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    document.getElementById("run").addEventListener("click", function() {
-
-        // your code here
-
-    });
-
+  document.getElementById("run").addEventListener("click", function() {
+    let n = 21;
+    let msg = "";
+    let res = "0";
+    for (let x = 1; x <= n; x++) {
+      res = x * x;
+      msg = msg + " " + x + " * " + x + " = " + res + "\n";
+    }
+    alert(msg);
+  });
 })();

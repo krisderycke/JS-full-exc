@@ -10,21 +10,34 @@
 // You will have time to focus on it later.
 
 (function() {
-    // to get the value of an input: document.getElementById("element-id").value
+  let opOne = document.getElementById("op-one");
+  let opTwo = document.getElementById("op-two");
 
-    document.getElementById("addition").addEventListener("click", function() {
-        // perform an addition
+  // to get the value of an input: document.getElementById("element-id").value
+
+  document.getElementById("addition").addEventListener("click", function() {
+    // perform an addition
+    let sum = parseInt(opOne.value) + parseInt(opTwo.value);
+    alert(`the sum is= ${sum}`);
+  });
+  document.getElementById("substraction").addEventListener("click", function() {
+    // perform an substraction
+    let sub = parseInt(opOne.value) - parseInt(opTwo.value);
+    alert(`the substraction is ${sub}`);
+  });
+
+  document
+    .getElementById("multiplication")
+    .addEventListener("click", function() {
+      // perform an multiplication
+
+      let multi = parseInt(opOne.value) * parseInt(opTwo.value);
+      alert(`multiplication is ${multi}`);
     });
 
-    document.getElementById("substraction").addEventListener("click", function() {
-        // perform an substraction
-    });
-
-    document.getElementById("multiplication").addEventListener("click", function() {
-        // perform an multiplication
-    });
-
-    document.getElementById("division").addEventListener("click", function() {
-        // perform an division
-    });
+  document.getElementById("division").addEventListener("click", function() {
+    // perform an division
+    let divi = parseInt(opOne.value) / parseInt(opTwo.value);
+    alert(`division is ${divi}`);
+  });
 })();
