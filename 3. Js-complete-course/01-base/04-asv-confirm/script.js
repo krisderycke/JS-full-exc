@@ -8,9 +8,16 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
+window.addEventListener("load", prompty);
+function prompty() {
+  let age = prompt("whats your age again?");
+  let gender = prompt("are you male or female?");
+  let city = prompt("what city do you live in?");
 
-(function() {
-
-    // your code here
-
-})();
+  let answer = confirm(
+    `You are ${age} old, you are ${gender} and you live in ${city} \n is that correct?`
+  );
+  if (answer == false) {
+    prompty();
+  }
+}

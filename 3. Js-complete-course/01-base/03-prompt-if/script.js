@@ -10,7 +10,13 @@
 // You will have time to focus on it later.
 
 (function() {
+  let cake = prompt("Would you like some cake??");
 
-  // your code here
-
+  switch (cake) {
+    case "yes":
+      alert("excellent choice!");
+      break;
+    default:
+      alert("More for me then");
+  }
 })();
