@@ -8,9 +8,13 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
+document.getElementById("run").addEventListener("click", randomColor);
 
-(function() {
-
-    // your code here
-
-})();
+function randomColor() {
+  var num = Math.round(0xffffff * Math.random());
+  let r = num >> 16;
+  let g = (num >> 8) & 255;
+  let b = num & 255;
+  let bgColor = "rgb(" + r + ", " + g + ", " + b + ")";
+  document.body.style.backgroundColor = bgColor;
+}
