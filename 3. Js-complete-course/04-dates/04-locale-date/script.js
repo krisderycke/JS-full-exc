@@ -10,9 +10,80 @@
 // You will have time to focus on it later.
 
 (function() {
+  var d = new Date();
+  var year = d.getFullYear();
+  var month = d.getMonth();
+  var date = d.getDate();
+  var day = d.getDay();
+  var hour = d.getHours();
+  var min = d.getMinutes();
+  if (min < 10) {
+    min = "0" + min;
+  }
+  var sec = d.getSeconds();
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+  console.log(
+    "year" +
+      " " +
+      "month" +
+      " " +
+      "date" +
+      " " +
+      "day" +
+      " " +
+      "hour" +
+      " " +
+      "min" +
+      " " +
+      "sec" +
+      "\n" +
+      year +
+      " " +
+      month +
+      " " +
+      date +
+      " " +
+      day +
+      " " +
+      hour +
+      " " +
+      min +
+      " " +
+      sec
+  );
 
-    // your code here
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
 
+  var weekDay = "";
+  var fullMonth = "";
+
+  weekDay = days[day];
+  fullMonth = months[month];
+  console.log(weekDay + " " + fullMonth);
+
+  document.getElementById(
+    "target"
+  ).innerHTML = `${weekDay} ${date} ${fullMonth} ${year} ; ${hour}Hr ${min}`;
 })();
