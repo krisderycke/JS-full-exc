@@ -10,7 +10,15 @@
 // You will have time to focus on it later.
 
 (function() {
+  let img = document.getElementById("source").getAttribute("data-image");
 
-    // your code here
+  let newImg = document.createElement("img");
+  newImg.setAttribute("src", img);
 
+  document.getElementById("target").appendChild(newImg);
+
+  //delete the old element:
+  document.getElementById("source").remove();
+
+  // your code here
 })();

@@ -10,7 +10,10 @@
 // You will have time to focus on it later.
 
 (function() {
+  let target = document.getElementsByClassName("target"); // your code here
+  console.log(target);
 
-    // your code here
-
+  for (i = 0; i < target.length; i++) {
+    target[i].innerHTML = "owney pony";
+  }
 })();

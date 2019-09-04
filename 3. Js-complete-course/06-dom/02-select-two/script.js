@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
-
+  let p = document.getElementsByTagName("p");
+  console.log(p);
+  p[1].innerHTML = "owned again";
 })();

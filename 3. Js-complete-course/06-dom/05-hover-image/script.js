@@ -10,7 +10,17 @@
 // You will have time to focus on it later.
 
 (function() {
+  let img = document.querySelector("img");
+  console.log(img);
+  let original = document.querySelector("img").getAttribute("src");
+  let wink = document.querySelector("img").getAttribute("data-hover");
 
-    // your code here
-
+  // Hover effect on image
+  img.addEventListener("mouseover", function(hover) {
+    img.src = wink;
+  });
+  // Hover out, for original pic,
+  img.addEventListener("mouseout", event => {
+    img.src = original;
+  });
 })();
